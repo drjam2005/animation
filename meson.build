@@ -3,8 +3,7 @@ project(
   'cpp',
   version : '0.1',
   meson_version : '>= 1.3.0',
-  default_options : ['warning_level=3', 'cpp_std=c++14'],
-)
+  default_options : ['warning_level=3', 'cpp_std=c++20'],)
 
 raylibDep = declare_dependency(
   include_directories: include_directories('include'),
@@ -28,6 +27,7 @@ exe = executable(
   install : true,
   include_directories : includeDirs,
   dependencies : dependencies,
+  cpp_args: ['-Wno-c++20-designator']
 )
 
 test('basic', exe)

@@ -1,5 +1,6 @@
 # Manim kind of animation
 
 TODO:
-- Create Keyframe kinda thing
-- Create animation using functions/classes such as (AnimateRect), (AnimateEllipse), and such
+- ENUMS ENUMS ENUMS
+- Create much more sophisticated animation system
+- Add text/font rendering and such

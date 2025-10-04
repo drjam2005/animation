@@ -1,28 +1,41 @@
-#include <iostream>
 #include <raylib.h>
 #include <objects.h>
-#include <thread>
 
 int main(int argc, char **argv) {
 	Keyframe recKeyFrames[] = {
 		{
-			1.0f,
-			1.0f,
-			2.0f,
-			{100, 100},
+			.duration = 3.0f,
+			.scale_x  = 1.0f,
+			.scale_y  = 1.0f,
+			.rotation = 0.0f,
+			.position = {100, 100},
 		}, {
-			1.0f,
-			2.0f,
-			2.0f,
-			{100, 250},
+			.duration = 0.25,
+			.scale_x  = 1.0f,
+			.scale_y  = 1.0f,
+			.rotation = 50.0f,
+			.position = {100, 100},
 		}, {
-			1.0f,
-			3.0f,
-			2.0f,
-			{150, 100},
+			.duration = 1.0f,
+			.scale_x  = 1.0f,
+			.scale_y  = 2.0f,
+			.rotation = 200.0f,
+			.position = {100, 100},
+		}, {
+			.duration = 1.0f,
+			.scale_x  = 2.0f,
+			.scale_y  = 2.0f,
+			.rotation = 360.0f,
+			.position = {100, 250},
+		}, {
+			.duration = 2.4f,
+			.scale_x  = 3.0f,
+			.scale_y  = 2.0f,
+			.rotation = 1080.0f,
+			.position = {500, 100},
 		}
 	};
-	AnimateRectangle rec({100, 100}, {20, 40}, WHITE, 3, {recKeyFrames});
+	AnimateRectangle rec({100, 100}, {40, 20}, WHITE, 1.0f, {recKeyFrames}, sizeof(recKeyFrames)/sizeof(recKeyFrames[0]));
 
 	InitWindow(600, 600, "test");
 	SetTargetFPS(60);

@@ -5,6 +5,7 @@ struct Keyframe {
 	float duration = 0.0f;
 	float scale_x = 1.0f;
 	float scale_y = 1.0f;
+	float rotation = 0.0f;
 	Vector2 position;
 };
 
@@ -20,7 +21,7 @@ class AnimateRectangle {
 		int size;
 		double startTime;
 	public:
-		AnimateRectangle(Vector2 position, Vector2 dimensions, Color color, int size, AnimationFrames frames);
+		AnimateRectangle(Vector2 position, Vector2 dimensions, Color color, double startTime, AnimationFrames frames, int size);
 		void Animate();
 };
 
