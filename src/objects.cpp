@@ -49,15 +49,7 @@ void AnimateRectangle::Animate() {
     if (t < 0.0f) t = 0.0f;
     if (t > 1.0f) t = 1.0f;
 
-
 	t = cubicBezierEase(t, 0.62, 0, 0.233, 1.01);
-    //DrawRectangle(
-	//	lerp(prev->position.x, next->position.x, t),
-    //    lerp(prev->position.y, next->position.y, t),
-    //    dimensions.x*lerp(prev->scale_x, next->scale_x, t),
-    //    dimensions.y*lerp(prev->scale_y, next->scale_y, t),
-    //    color
-    //);
 	float posX = lerp(prev->position.x, next->position.x, t);
 	float posY = lerp(prev->position.y, next->position.y, t);
 	float width  = dimensions.x * lerp(prev->scale_x, next->scale_x, t);
@@ -65,7 +57,7 @@ void AnimateRectangle::Animate() {
 
 	DrawRectanglePro(
 		Rectangle{ posX, posY, width, height },
-		Vector2{ width/2, height/2 }, // <-- rotate around center
+		Vector2{ width/2, height/2 },
 		lerp(prev->rotation, next->rotation, t),
 		color
 	);
