@@ -19,6 +19,7 @@ includeDirs = include_directories('include')
 
 src = [
   'src/main.cpp',
+  'src/objects.cpp',
 ]
 
 exe = executable(
