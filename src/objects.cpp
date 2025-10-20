@@ -7,11 +7,6 @@ unsigned char lerpColor(unsigned char a, unsigned char b, float t) {
     return (unsigned char)((1.0f - t) * a + t * b);
 };
 
-
-float lerp(float a, float b, float f) {
-    return (a * (1.0 - f)) + (b * f);
-}
-
 float cubicBezierEase(float t, float x1, float y1, float x2, float y2) {
     float u = 1.0f - t;
     float tt = t * t;
